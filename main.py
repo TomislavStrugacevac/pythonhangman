@@ -4,12 +4,12 @@ import sys
 word_list = ["Tree", "Car", "Book", "Dog", "Cat", "House", "Chair", "Mountain", "Ocean", "Sun", "Moon", "Star",
              "Flower", "River", "Bird", "Computer", "Table", "Lamp", "Phone", "Pizza"]
 
-
 chosen_word = (random.choice(word_list)).lower()
 word_length = len(chosen_word)
 guessed_word_one = ["_" for _ in range(word_length)]
 guessed_word = "".join(guessed_word_one)
 attempt_number = 0
+
 
 def find_letters(s, ch):
     return [i for i, ltr in enumerate(s) if ltr == ch]
@@ -111,5 +111,6 @@ def gallows(i):
         print("       /|\\")
         print("YOU LOSE!!!!")
         sys.exit(0)
+
 
 hangman(guessed_word)
